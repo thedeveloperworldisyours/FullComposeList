@@ -27,6 +27,8 @@
             android:theme="@style/Theme.JetpackComposeLists.NoActionBar" />
         <activity android:name=".expandable.ExpandableActivity"
             android:theme="@style/Theme.JetpackComposeLists.NoActionBar" />
+        <activity android:name=".multiple.MultipleActivity"
+            android:theme="@style/Theme.JetpackComposeLists.NoActionBar" />
     </application>
 
 </manifest>

@@ -3,6 +3,7 @@
     <string name="section">Section</string>
     <string name="section_stick">Section stick</string>
     <string name="expandable">Expandable</string>
+    <string name="multiple">Multiple choice</string>
 
     <string-array name="fruits_array">
         <item>Apples</item>
