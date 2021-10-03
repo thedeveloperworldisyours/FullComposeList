@@ -4,9 +4,12 @@ Jetpack compose lists
  <h4>This is a compilation of differents kinds and actiones in lists with Jetpack Compose</h4>
 </p>
 
+<p align="center">
+ <img src="https://github.com/thedeveloperworldisyours/FullComposeList/blob/master/resources/sectionWithStickyHeader.gif" width="300px" />
+</p>
 
 # About
-  This is a compilation of differents kinds and actiones in recyclerView :
+  This is a compilation of differents kinds and actiones in composable list :
    
  - [ ] **[Clickable list](https://github.com/thedeveloperworldisyours/FullComposeList/tree/master/app/src/main/java/com/a/jetpackcomposelists/main)
  - [ ] **[Expandable list](https://github.com/thedeveloperworldisyours/FullComposeList/tree/master/app/src/main/java/com/a/jetpackcomposelists/expandable)
