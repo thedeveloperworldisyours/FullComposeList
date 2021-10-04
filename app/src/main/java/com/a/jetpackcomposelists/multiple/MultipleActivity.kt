@@ -12,14 +12,15 @@ import com.a.jetpackcomposelists.ui.theme.JetpackComposeListsTheme
 
 class MultipleActivity : ComponentActivity() {
 
-    private val viewModel by viewModels<MainViewModel>()
+    private val viewModel by viewModels<MultipleViewModel>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        viewModel.getInitial(this)
         setContent {
             JetpackComposeListsTheme {
                 Surface(color = MaterialTheme.colors.background) {
-                    MultipleScreen()
+                    MultipleScreen(viewModel)
                 }
             }
         }

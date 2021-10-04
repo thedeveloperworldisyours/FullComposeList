@@ -22,32 +22,34 @@ import androidx.compose.ui.unit.dp
 
 @Composable
 fun MultipleScreen(
-    names: List<String> = List(15) { "Item #$it" },
-    completed: MutableList<Boolean> = MutableList(15) { false }
+    viewModel: MultipleViewModel,
+    completed: MutableList<Boolean> = MutableList(viewModel.fruitList.size) { false }
 ) {
     Column(modifier = Modifier.fillMaxHeight()) {
-        NameList(names, Modifier.weight(1f), completed)
+        NameList(viewModel, Modifier.weight(1f), completed)
     }
 }
 
 @Composable
-fun NameList(names: List<String>, modifier: Modifier, completed: MutableList<Boolean>) {
+fun NameList(
+    viewModel: MultipleViewModel, modifier: Modifier, completed: MutableList<Boolean>) {
     LazyColumn(modifier = modifier) {
-        itemsIndexed(items = names) { index: Int, item: String ->
-            Greeting(name = item, completed, index)
+        itemsIndexed(items = viewModel.fruitList) { index: Int, item: String ->
+            Greeting(viewModel, name = item, completed, index)
             Divider(color = Color.LightGray)
         }
     }
 }
 
 @Composable
-fun Greeting(name: String, completedList: MutableList<Boolean>, index: Int) {
+fun Greeting(
+    viewModel: MultipleViewModel,name: String, completedList: MutableList<Boolean>, index: Int) {
     var isSelected by rememberSaveable { mutableStateOf(completedList[index]) }
     val backgroundColor by animateColorAsState(if (isSelected) Color.Blue else Color.Transparent)
 
     Box(Modifier.fillMaxWidth()) {
         Text(
-            text = "Hello $name!",
+            text = name,
             modifier = Modifier
                 .padding(24.dp).align(Alignment.CenterStart)
         )
@@ -56,6 +58,7 @@ fun Greeting(name: String, completedList: MutableList<Boolean>, index: Int) {
             onCheckedChange = {
                 isSelected = !isSelected
                 completedList[index] = !isSelected
+                viewModel.fruitSelected(index)
             },
             modifier = Modifier
                 .padding(24.dp)
