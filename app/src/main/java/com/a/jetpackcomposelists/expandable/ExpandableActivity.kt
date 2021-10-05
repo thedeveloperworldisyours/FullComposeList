@@ -16,11 +16,10 @@ class ExpandableActivity : ComponentActivity() {
     @ExperimentalAnimationApi
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        viewModel.getElement(this)
         setContent {
             JetpackComposeListsTheme {
                 Surface(color = MaterialTheme.colors.background) {
-                    ExpandableScreen(viewModel)
+                    ExpandableScreen(viewModel, this)
                 }
             }
         }

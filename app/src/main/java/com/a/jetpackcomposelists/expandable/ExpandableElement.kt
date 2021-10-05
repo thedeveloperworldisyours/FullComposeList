@@ -1,6 +1,7 @@
 package com.a.jetpackcomposelists.expandable
 
 import android.annotation.SuppressLint
+import android.content.Context
 import androidx.compose.animation.*
 import androidx.compose.animation.core.*
 import androidx.compose.foundation.background
@@ -34,11 +35,12 @@ import com.a.jetpackcomposelists.expandable.Constants.FADE_OUT_ANIMATION
 @Composable
 fun ExpandableElement(
     modifier: Modifier,
-    expandableViewModel: ExpandableViewModel
+    expandableViewModel: ExpandableViewModel,
+    context: Context
 ) {
     val expandedItem = expandableViewModel.expandedList.collectAsState()
     LazyColumn(modifier = modifier) {
-        itemsIndexed(items = expandableViewModel.elementList) { index, item: Element ->
+        itemsIndexed(items = expandableViewModel.getElement(context)) { index, item: Element ->
             ExpandableCard(
                 element = item,
                 onCardArrowClick = { expandableViewModel.cardArrowClick(index) },

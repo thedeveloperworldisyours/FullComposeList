@@ -1,25 +1,27 @@
-package com.a.jetpackcomposelists.multiple
+package com.a.jetpackcomposelists.grid
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.viewModels
+import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
-import com.a.jetpackcomposelists.main.MainViewModel
-import com.a.jetpackcomposelists.main.MyScreenContent
+import com.a.jetpackcomposelists.horizontal.HorizontalScreen
+import com.a.jetpackcomposelists.horizontal.HorizontalViewModel
 import com.a.jetpackcomposelists.ui.theme.JetpackComposeListsTheme
 
-class MultipleActivity : ComponentActivity() {
+class GridActivity: ComponentActivity() {
 
-    private val viewModel by viewModels<MultipleViewModel>()
+    private val viewModel by viewModels<GridViewModel>()
 
+    @ExperimentalFoundationApi
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
             JetpackComposeListsTheme {
                 Surface(color = MaterialTheme.colors.background) {
-                    MultipleScreen(viewModel, this)
+                    GridScreen(viewModel, this)
                 }
             }
         }

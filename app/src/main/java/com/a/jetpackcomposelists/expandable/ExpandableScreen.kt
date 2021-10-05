@@ -1,5 +1,6 @@
 package com.a.jetpackcomposelists.expandable
 
+import android.content.Context
 import androidx.compose.animation.ExperimentalAnimationApi
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
@@ -17,7 +18,7 @@ import com.a.jetpackcomposelists.R
 @ExperimentalAnimationApi
 @Composable
 fun ExpandableScreen(
-    expandableViewModel: ExpandableViewModel
+    expandableViewModel: ExpandableViewModel, context: Context
 ) {
 
     Scaffold(
@@ -39,7 +40,8 @@ fun ExpandableScreen(
                 Modifier
                     .fillMaxWidth()
                     .background(Color.White),
-                expandableViewModel
+                expandableViewModel,
+                context
             )
         }
     }

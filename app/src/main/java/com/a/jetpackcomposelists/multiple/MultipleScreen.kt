@@ -1,9 +1,9 @@
 package com.a.jetpackcomposelists.multiple
 
+import android.content.Context
 import androidx.compose.animation.animateColorAsState
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.material.Checkbox
@@ -23,18 +23,22 @@ import androidx.compose.ui.unit.dp
 @Composable
 fun MultipleScreen(
     viewModel: MultipleViewModel,
-    completed: MutableList<Boolean> = MutableList(viewModel.fruitList.size) { false }
+    context: Context,
+    completed: MutableList<Boolean> = MutableList(viewModel.getInitial(context).size) { false }
 ) {
     Column(modifier = Modifier.fillMaxHeight()) {
-        NameList(viewModel, Modifier.weight(1f), completed)
+        NameList(viewModel, context, Modifier.weight(1f), completed)
     }
 }
 
 @Composable
 fun NameList(
-    viewModel: MultipleViewModel, modifier: Modifier, completed: MutableList<Boolean>) {
+    viewModel: MultipleViewModel,
+    context: Context,
+    modifier: Modifier, completed: MutableList<Boolean>
+) {
     LazyColumn(modifier = modifier) {
-        itemsIndexed(items = viewModel.fruitList) { index: Int, item: String ->
+        itemsIndexed(items = viewModel.getInitial(context)) { index: Int, item: String ->
             Greeting(viewModel, name = item, completed, index)
             Divider(color = Color.LightGray)
         }
@@ -43,7 +47,8 @@ fun NameList(
 
 @Composable
 fun Greeting(
-    viewModel: MultipleViewModel,name: String, completedList: MutableList<Boolean>, index: Int) {
+    viewModel: MultipleViewModel, name: String, completedList: MutableList<Boolean>, index: Int
+) {
     var isSelected by rememberSaveable { mutableStateOf(completedList[index]) }
     val backgroundColor by animateColorAsState(if (isSelected) Color.Blue else Color.Transparent)
 
@@ -51,7 +56,8 @@ fun Greeting(
         Text(
             text = name,
             modifier = Modifier
-                .padding(24.dp).align(Alignment.CenterStart)
+                .padding(24.dp)
+                .align(Alignment.CenterStart)
         )
         Checkbox(
             checked = isSelected,
@@ -62,7 +68,8 @@ fun Greeting(
             },
             modifier = Modifier
                 .padding(24.dp)
-                .background(color = backgroundColor).align(Alignment.CenterEnd)
+                .background(color = backgroundColor)
+                .align(Alignment.CenterEnd)
         )
     }
 }

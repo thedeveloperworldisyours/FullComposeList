@@ -23,11 +23,20 @@
         <activity
             android:name=".section.SectionActivity"
             android:theme="@style/Theme.JetpackComposeLists.NoActionBar" />
-        <activity android:name=".sectionstick.SectionStickActivity"
+        <activity
+            android:name=".sectionstick.SectionStickActivity"
             android:theme="@style/Theme.JetpackComposeLists.NoActionBar" />
-        <activity android:name=".expandable.ExpandableActivity"
+        <activity
+            android:name=".expandable.ExpandableActivity"
             android:theme="@style/Theme.JetpackComposeLists.NoActionBar" />
-        <activity android:name=".multiple.MultipleActivity"
+        <activity
+            android:name=".multiple.MultipleActivity"
+            android:theme="@style/Theme.JetpackComposeLists.NoActionBar" />
+        <activity
+            android:name=".horizontal.HorizontalActivity"
+            android:theme="@style/Theme.JetpackComposeLists.NoActionBar" />
+        <activity
+            android:name=".grid.GridActivity"
             android:theme="@style/Theme.JetpackComposeLists.NoActionBar" />
     </application>
 

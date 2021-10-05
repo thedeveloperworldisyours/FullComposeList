@@ -4,6 +4,8 @@
     <string name="section_stick">Section stick</string>
     <string name="expandable">Expandable</string>
     <string name="multiple">Multiple choice</string>
+    <string name="horizontal">Horizontal</string>
+    <string name="grid">Grid</string>
 
     <string-array name="fruits_array">
         <item>Apples</item>

@@ -9,10 +9,10 @@ import kotlinx.coroutines.flow.StateFlow
 class ExpandableViewModel : ViewModel() {
     private val expandedListMutable = MutableStateFlow(listOf<Int>())
     val expandedList : StateFlow<List<Int>> get() = expandedListMutable
-    val elementList = mutableListOf<Element>()
 
 
     fun getElement(context: Context): List<Element> {
+        val elementList = mutableListOf<Element>()
         val fruits: List<String> = context.resources.getStringArray(R.array.fruits_array).toList()
 
         fruits.forEach {

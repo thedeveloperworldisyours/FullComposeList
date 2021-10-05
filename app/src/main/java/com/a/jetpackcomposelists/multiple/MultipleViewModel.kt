@@ -10,12 +10,9 @@ import kotlinx.coroutines.flow.StateFlow
 class MultipleViewModel: ViewModel() {
     private val booleanListMutable = MutableStateFlow(listOf<Int>())
     val booleanList : StateFlow<List<Int>> get() = booleanListMutable
-    var fruitList = mutableListOf<String>()
 
-    fun getInitial(context: Context) {
-       fruitList = context.resources.getStringArray(
+    fun getInitial(context: Context) = context.resources.getStringArray(
            R.array.fruits_array).toList().toMutableList()
-    }
 
     fun fruitSelected(fruitSelected: Int) {
         booleanListMutable.value = booleanListMutable.value.toMutableList().also{ list ->
