@@ -38,6 +38,12 @@
         <activity
             android:name=".grid.GridActivity"
             android:theme="@style/Theme.JetpackComposeLists.NoActionBar" />
+        <activity
+            android:name=".one.OneActivity"
+            android:theme="@style/Theme.JetpackComposeLists.NoActionBar" />
+        <activity
+            android:name=".swipe.SwipeActivity"
+            android:theme="@style/Theme.JetpackComposeLists.NoActionBar" />
     </application>
 
 </manifest>

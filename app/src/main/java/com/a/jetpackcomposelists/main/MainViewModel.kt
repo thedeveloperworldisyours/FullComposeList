@@ -2,15 +2,16 @@ package com.a.jetpackcomposelists.main
 
 import android.content.Context
 import android.content.Intent
-import androidx.compose.ui.res.stringResource
 import androidx.lifecycle.ViewModel
 import com.a.jetpackcomposelists.R
 import com.a.jetpackcomposelists.expandable.ExpandableActivity
 import com.a.jetpackcomposelists.grid.GridActivity
 import com.a.jetpackcomposelists.horizontal.HorizontalActivity
+import com.a.jetpackcomposelists.one.OneActivity
 import com.a.jetpackcomposelists.multiple.MultipleActivity
 import com.a.jetpackcomposelists.section.SectionActivity
 import com.a.jetpackcomposelists.sectionstick.SectionStickActivity
+import com.a.jetpackcomposelists.swipe.SwipeActivity
 
 class MainViewModel : ViewModel() {
 
@@ -21,6 +22,8 @@ class MainViewModel : ViewModel() {
         const val MULTIPLE = 3
         const val HORIZONTAL = 4
         const val GRID = 5
+        const val ONE_CHOICE = 6
+        const val SWIPE = 7
     }
 
     fun getList(context: Context): MutableList<String> {
@@ -31,11 +34,13 @@ class MainViewModel : ViewModel() {
         fruitList.add(context.resources.getString(R.string.multiple))
         fruitList.add(context.resources.getString(R.string.horizontal))
         fruitList.add(context.resources.getString(R.string.grid))
+        fruitList.add(context.resources.getString(R.string.one_choice))
+        fruitList.add(context.resources.getString(R.string.swipe))
         return fruitList
     }
 
     fun goToNewScreen(index: Int, context: Context) {
-        when(index) {
+        when (index) {
             SECTION -> {
                 context.startActivity(Intent(context, SectionActivity::class.java))
             }
@@ -53,6 +58,12 @@ class MainViewModel : ViewModel() {
             }
             GRID -> {
                 context.startActivity(Intent(context, GridActivity::class.java))
+            }
+            ONE_CHOICE -> {
+                context.startActivity(Intent(context, OneActivity::class.java))
+            }
+            SWIPE -> {
+                context.startActivity(Intent(context, SwipeActivity::class.java))
             }
         }
     }

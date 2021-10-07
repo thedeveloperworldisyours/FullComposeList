@@ -6,6 +6,8 @@
     <string name="multiple">Multiple choice</string>
     <string name="horizontal">Horizontal</string>
     <string name="grid">Grid</string>
+    <string name="one_choice">One choice</string>
+    <string name="swipe">Swipe</string>
 
     <string-array name="fruits_array">
         <item>Apples</item>
