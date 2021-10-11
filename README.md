@@ -20,7 +20,7 @@ Jetpack compose lists
  - [ ] **[Expandable list](https://github.com/thedeveloperworldisyours/FullComposeList/tree/master/app/src/main/java/com/a/jetpackcomposelists/expandable)**
  - [ ] **[Multiple Choice](https://github.com/thedeveloperworldisyours/FullComposeList/tree/master/app/src/main/java/com/a/jetpackcomposelists/multiple)**
  - [ ] **[Section](https://github.com/thedeveloperworldisyours/FullComposeList/tree/master/app/src/main/java/com/a/jetpackcomposelists/section)**
- - [ ] **[Section With stickyHeader](https://github.com/thedeveloperworldisyours/FullComposeList/tree/master/app/src/main/java/com/a/jetpackcomposelists/sectionstick)**
+ - [ ] **[Section With StickyHeader](https://github.com/thedeveloperworldisyours/FullComposeList/tree/master/app/src/main/java/com/a/jetpackcomposelists/sectionstick)**
  - [ ] **[Swipe](https://github.com/thedeveloperworldisyours/FullComposeList/tree/master/app/src/main/java/com/a/jetpackcomposelists/swipe)**
  - [ ] **[Grid](https://github.com/thedeveloperworldisyours/FullComposeList/tree/master/app/src/main/java/com/a/jetpackcomposelists/grid)**
  - [ ] **[Horizontal](https://github.com/thedeveloperworldisyours/FullComposeList/tree/master/app/src/main/java/com/a/jetpackcomposelists/horizontal)**
