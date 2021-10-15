@@ -22,11 +22,10 @@ import com.a.jetpackcomposelists.multiple.MultipleViewModel
 @Composable
 fun OneScreen(
     viewModel: OneViewModel,
-    context: Context,
-    completed: MutableList<Boolean> = MutableList(viewModel.getInitial(context).size) { false }
+    context: Context
 ) {
     Column(modifier = Modifier.fillMaxHeight()) {
-        NameList(viewModel, context, Modifier.weight(1f), completed)
+        NameList(viewModel, context, Modifier.weight(1f))
     }
 }
 
@@ -34,11 +33,11 @@ fun OneScreen(
 fun NameList(
     viewModel: OneViewModel,
     context: Context,
-    modifier: Modifier, completed: MutableList<Boolean>
+    modifier: Modifier
 ) {
     LazyColumn(modifier = modifier) {
         itemsIndexed(items = viewModel.getInitial(context)) { index: Int, item: String ->
-            Greeting(viewModel, name = item, completed, index)
+            Greeting(viewModel, name = item, index)
             TabRowDefaults.Divider(color = Color.LightGray)
         }
     }
@@ -46,9 +45,10 @@ fun NameList(
 
 @Composable
 fun Greeting(
-    viewModel: OneViewModel, name: String, completedList: MutableList<Boolean>, index: Int
+    viewModel: OneViewModel, name: String, index: Int
 ) {
-    var isSelected by rememberSaveable { mutableStateOf(completedList[index]) }
+
+    var isSelected by rememberSaveable { mutableStateOf(viewModel.completed[index]) }
     val backgroundColor by animateColorAsState(if (isSelected) Color.Blue else Color.Transparent)
 
     Box(Modifier.fillMaxWidth()) {
@@ -62,7 +62,14 @@ fun Greeting(
             checked = isSelected,
             onCheckedChange = {
                 isSelected = !isSelected
-                completedList[index] = !isSelected
+                viewModel.completed[viewModel.lastIndex] = isSelected
+                viewModel.lastIndex = index
+                /*viewModel.completed[index] = !isSelected
+
+
+                viewModel.completed[viewModel.lastIndex] = false
+                viewModel.lastIndex = index
+                viewModel.completed[index] = true*/
                 viewModel.fruitSelected(index)
             },
             modifier = Modifier
