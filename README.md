@@ -5,11 +5,20 @@ Jetpack compose lists
 </p>
 
 <p align="center">
+ <a href="https://github.com/thedeveloperworldisyours/FullComposeList/tree/master/app/src/main/java/com/a/jetpackcomposelists/main" class="class"> 
+  <img src="https://github.com/thedeveloperworldisyours/FullComposeList/blob/master/resources/clickable.gif" width="200px" /> 
+ </a>
  <a href="https://github.com/thedeveloperworldisyours/FullComposeList/tree/master/app/src/main/java/com/a/jetpackcomposelists/sectionstick" class="class"> 
-  <img src="https://github.com/thedeveloperworldisyours/FullComposeList/blob/master/resources/sectionWithStickyHeader.gif" width="300px" /> 
+  <img src="https://github.com/thedeveloperworldisyours/FullComposeList/blob/master/resources/sectionWithStickyHeader.gif" width="200px" /> 
  </a>
  <a href="https://github.com/thedeveloperworldisyours/FullComposeList/tree/master/app/src/main/java/com/a/jetpackcomposelists/swipe" class="class"> 
-  <img src="https://github.com/thedeveloperworldisyours/FullComposeList/blob/master/resources/swipe.gif" width="300px" />
+  <img src="https://github.com/thedeveloperworldisyours/FullComposeList/blob/master/resources/swipe.gif" width="200px" />
+ </a>
+ <a href="https://github.com/thedeveloperworldisyours/FullComposeList/tree/master/app/src/main/java/com/a/jetpackcomposelists/expandable" class="class"> 
+  <img src="https://github.com/thedeveloperworldisyours/FullComposeList/blob/master/resources/expandable.gif" width="200px" />
+ </a>
+ <a href="https://github.com/thedeveloperworldisyours/FullComposeList/tree/master/app/src/main/java/com/a/jetpackcomposelists/multiple" class="class"> 
+  <img src="https://github.com/thedeveloperworldisyours/FullComposeList/blob/master/resources/multiple.gif" width="200px" />
  </a>
 </p>
 
