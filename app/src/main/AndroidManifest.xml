@@ -39,7 +39,7 @@
             android:name=".grid.GridActivity"
             android:theme="@style/Theme.JetpackComposeLists.NoActionBar" />
         <activity
-            android:name=".one.OneActivity"
+            android:name=".single.SingleActivity"
             android:theme="@style/Theme.JetpackComposeLists.NoActionBar" />
         <activity
             android:name=".swipe.SwipeActivity"

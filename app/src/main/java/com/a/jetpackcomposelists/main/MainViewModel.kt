@@ -7,7 +7,7 @@ import com.a.jetpackcomposelists.R
 import com.a.jetpackcomposelists.expandable.ExpandableActivity
 import com.a.jetpackcomposelists.grid.GridActivity
 import com.a.jetpackcomposelists.horizontal.HorizontalActivity
-import com.a.jetpackcomposelists.one.OneActivity
+import com.a.jetpackcomposelists.single.SingleActivity
 import com.a.jetpackcomposelists.multiple.MultipleActivity
 import com.a.jetpackcomposelists.section.SectionActivity
 import com.a.jetpackcomposelists.sectionstick.SectionStickActivity
@@ -60,7 +60,7 @@ class MainViewModel : ViewModel() {
                 context.startActivity(Intent(context, GridActivity::class.java))
             }
             ONE_CHOICE -> {
-                context.startActivity(Intent(context, OneActivity::class.java))
+                context.startActivity(Intent(context, SingleActivity::class.java))
             }
             SWIPE -> {
                 context.startActivity(Intent(context, SwipeActivity::class.java))

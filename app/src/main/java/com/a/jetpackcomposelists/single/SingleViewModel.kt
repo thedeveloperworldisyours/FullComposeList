@@ -1,4 +1,4 @@
-package com.a.jetpackcomposelists.one
+package com.a.jetpackcomposelists.single
 
 import android.content.Context
 import androidx.compose.runtime.mutableStateOf
@@ -7,7 +7,7 @@ import com.a.jetpackcomposelists.R
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 
-class OneViewModel: ViewModel() {
+class SingleViewModel: ViewModel() {
 
     var lastIndex = 0
     var mutableList = mutableListOf<String>()
