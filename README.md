@@ -8,11 +8,20 @@ Jetpack compose lists
  <a href="https://github.com/thedeveloperworldisyours/FullComposeList/tree/master/app/src/main/java/com/a/jetpackcomposelists/main" class="class"> 
   <img src="https://github.com/thedeveloperworldisyours/FullComposeList/blob/master/resources/clickable.gif" width="200px" /> 
  </a>
+ <a href="https://github.com/thedeveloperworldisyours/FullComposeList/tree/master/app/src/main/java/com/a/jetpackcomposelists/section" class="class"> 
+  <img src="https://github.com/thedeveloperworldisyours/FullComposeList/blob/master/resources/section.gif" width="200px" /> 
+ </a>
  <a href="https://github.com/thedeveloperworldisyours/FullComposeList/tree/master/app/src/main/java/com/a/jetpackcomposelists/sectionstick" class="class"> 
   <img src="https://github.com/thedeveloperworldisyours/FullComposeList/blob/master/resources/sectionWithStickyHeader.gif" width="200px" /> 
  </a>
  <a href="https://github.com/thedeveloperworldisyours/FullComposeList/tree/master/app/src/main/java/com/a/jetpackcomposelists/swipe" class="class"> 
   <img src="https://github.com/thedeveloperworldisyours/FullComposeList/blob/master/resources/swipe.gif" width="200px" />
+ </a>
+ <a href="https://github.com/thedeveloperworldisyours/FullComposeList/tree/master/app/src/main/java/com/a/jetpackcomposelists/grid" class="class"> 
+  <img src="https://github.com/thedeveloperworldisyours/FullComposeList/blob/master/resources/grid.gif" width="200px" /> 
+ </a>
+ <a href="https://github.com/thedeveloperworldisyours/FullComposeList/tree/master/app/src/main/java/com/a/jetpackcomposelists/horizontal" class="class"> 
+  <img src="https://github.com/thedeveloperworldisyours/FullComposeList/blob/master/resources/horizontal.gif" width="200px" />
  </a>
  <a href="https://github.com/thedeveloperworldisyours/FullComposeList/tree/master/app/src/main/java/com/a/jetpackcomposelists/expandable" class="class"> 
   <img src="https://github.com/thedeveloperworldisyours/FullComposeList/blob/master/resources/expandable.gif" width="200px" />
