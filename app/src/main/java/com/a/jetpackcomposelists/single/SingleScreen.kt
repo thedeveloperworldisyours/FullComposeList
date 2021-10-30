@@ -15,6 +15,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontStyle
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.a.jetpackcomposelists.R
@@ -85,7 +86,7 @@ fun ElementSelected(
         Text(
             text = text,
             fontSize = 30.sp,
-            fontStyle = FontStyle.Italic,
+            fontWeight = FontWeight.Bold,
             modifier = Modifier
                 .padding(start = 16.dp)
                 .align(Alignment.Center)
