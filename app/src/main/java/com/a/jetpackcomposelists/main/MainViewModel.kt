@@ -4,11 +4,13 @@ import android.content.Context
 import android.content.Intent
 import androidx.lifecycle.ViewModel
 import com.a.jetpackcomposelists.R
+import com.a.jetpackcomposelists.singlebackground.SingleBackgroundActivity
 import com.a.jetpackcomposelists.expandable.ExpandableActivity
 import com.a.jetpackcomposelists.grid.GridActivity
 import com.a.jetpackcomposelists.horizontal.HorizontalActivity
 import com.a.jetpackcomposelists.single.SingleActivity
 import com.a.jetpackcomposelists.multiple.MultipleActivity
+import com.a.jetpackcomposelists.multiplebackground.MultipleBackgroundActivity
 import com.a.jetpackcomposelists.section.SectionActivity
 import com.a.jetpackcomposelists.sectionstick.SectionStickActivity
 import com.a.jetpackcomposelists.swipe.SwipeActivity
@@ -24,6 +26,8 @@ class MainViewModel : ViewModel() {
         const val GRID = 5
         const val ONE_CHOICE = 6
         const val SWIPE = 7
+        const val SINGLE_BACKGROUND = 8
+        const val MULTIPLE_BACKGROUND = 9
     }
 
     fun getList(context: Context): MutableList<String> {
@@ -36,6 +40,8 @@ class MainViewModel : ViewModel() {
         fruitList.add(context.resources.getString(R.string.grid))
         fruitList.add(context.resources.getString(R.string.one_choice))
         fruitList.add(context.resources.getString(R.string.swipe))
+        fruitList.add(context.resources.getString(R.string.single_background))
+        fruitList.add(context.resources.getString(R.string.multiple_background))
         return fruitList
     }
 
@@ -64,6 +70,12 @@ class MainViewModel : ViewModel() {
             }
             SWIPE -> {
                 context.startActivity(Intent(context, SwipeActivity::class.java))
+            }
+            SINGLE_BACKGROUND -> {
+                context.startActivity(Intent(context, SingleBackgroundActivity::class.java))
+            }
+            MULTIPLE_BACKGROUND -> {
+                context.startActivity(Intent(context, MultipleBackgroundActivity::class.java))
             }
         }
     }

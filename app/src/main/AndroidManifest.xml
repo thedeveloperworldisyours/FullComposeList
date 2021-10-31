@@ -44,6 +44,12 @@
         <activity
             android:name=".swipe.SwipeActivity"
             android:theme="@style/Theme.JetpackComposeLists.NoActionBar" />
+        <activity
+            android:name=".singlebackground.SingleBackgroundActivity"
+            android:theme="@style/Theme.JetpackComposeLists.NoActionBar" />
+        <activity
+            android:name=".multiplebackground.MultipleBackgroundActivity"
+            android:theme="@style/Theme.JetpackComposeLists.NoActionBar" />
     </application>
 
 </manifest>

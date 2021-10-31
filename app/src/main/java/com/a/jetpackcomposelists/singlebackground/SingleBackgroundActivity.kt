@@ -1,4 +1,4 @@
-package com.a.jetpackcomposelists.single
+package com.a.jetpackcomposelists.singlebackground
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -9,9 +9,9 @@ import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import com.a.jetpackcomposelists.ui.theme.JetpackComposeListsTheme
 
-class SingleActivity : ComponentActivity() {
+class SingleBackgroundActivity: ComponentActivity() {
 
-    val viewModel by viewModels<SingleViewModel>()
+    val viewModel by viewModels<SingleBackgroundViewModel>()
 
     @ExperimentalFoundationApi
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -19,9 +19,10 @@ class SingleActivity : ComponentActivity() {
         setContent {
             JetpackComposeListsTheme {
                 Surface(color = MaterialTheme.colors.background) {
-                    SingleScreen(this)
+                    BackgroundSingleScreen(this)
                 }
             }
         }
     }
+
 }

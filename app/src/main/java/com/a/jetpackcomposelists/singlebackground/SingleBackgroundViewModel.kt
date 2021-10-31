@@ -1,13 +1,10 @@
-package com.a.jetpackcomposelists.single
+package com.a.jetpackcomposelists.singlebackground
 
 import android.content.Context
-import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import com.a.jetpackcomposelists.R
-import kotlinx.coroutines.flow.MutableStateFlow
-import kotlinx.coroutines.flow.StateFlow
 
-class SingleViewModel: ViewModel() {
+class SingleBackgroundViewModel: ViewModel() {
 
     var mutableList = mutableListOf<String>()
     var completed = mutableListOf<Boolean>()

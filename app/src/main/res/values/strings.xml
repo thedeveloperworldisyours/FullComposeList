@@ -8,6 +8,8 @@
     <string name="grid">Grid</string>
     <string name="one_choice">One choice</string>
     <string name="swipe">Swipe</string>
+    <string name="single_background">Single Background</string>
+    <string name="multiple_background">Multiple Background</string>
 
     <string-array name="fruits_array">
         <item>Apples</item>

@@ -1,25 +1,23 @@
-package com.a.jetpackcomposelists.single
+package com.a.jetpackcomposelists.multiplebackground
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.viewModels
-import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import com.a.jetpackcomposelists.ui.theme.JetpackComposeListsTheme
 
-class SingleActivity : ComponentActivity() {
+class MultipleBackgroundActivity: ComponentActivity() {
 
-    val viewModel by viewModels<SingleViewModel>()
+    val viewModel by viewModels<MultipleBackgroundViewModel>()
 
-    @ExperimentalFoundationApi
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
             JetpackComposeListsTheme {
                 Surface(color = MaterialTheme.colors.background) {
-                    SingleScreen(this)
+                    MultipleBackgroundScreen(this)
                 }
             }
         }
